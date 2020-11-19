@@ -1,2 +1,2 @@
-FLASK_APP=todo.py
+FLASK_APP=event.py
 FLASK_ENV=development
