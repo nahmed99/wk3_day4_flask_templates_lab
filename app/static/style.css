@@ -1,7 +1,12 @@
-#the-body {
+#thebody{
     background-color: powderblue;
 }
 
-#the-para {
-    background-color: rebeccapurple;
+#thepara{
+    color: rebeccapurple;
+}
+
+#recurrance{
+    background-color: yellowgreen;
+    display: inline;
 }

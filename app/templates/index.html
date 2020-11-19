@@ -7,10 +7,15 @@
     {% for event in events %}
     
     <div>
-        <p id=the-para>
-            {{ event.date }} : <b>{{ event.event_name}}, &#8287; {{ event.guest_numbers }}, &#8287; {{event.room_location}}, &#8287; {{event.description}}</b>
+        <p id="thepara">
             {% if event.recurring %}
-                <span>👍</span>
+                <p id=recurrance>
+                    {{ event.date }} : <b>{{ event.event_name}}, &#8287; {{ event.guest_numbers }}, &#8287; {{event.room_location}}, &#8287; {{event.description}}</b>
+                    <span>👍</span>
+                </p>
+            {% else %}
+                {{ event.date }} : <b>{{ event.event_name}}, &#8287; {{ event.guest_numbers }}, &#8287; {{event.room_location}}, &#8287; {{event.description}}</b>
+                
             {% endif %}
         </p>
 
