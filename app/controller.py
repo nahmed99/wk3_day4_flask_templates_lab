@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-from app.models.todo_list import events
+from app.models.event_list import events
 
 @app.route('/') # This listens for 'requests' to the home/root
 def index():
