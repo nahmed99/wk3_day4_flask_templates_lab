@@ -2,18 +2,17 @@
 
 {% block content %}
 
-    <h1>My Todo List</h1>
-    <!-- Jinja 2 to merge Python into this document -->
-    <!-- Note the use of single curly brackets in this case -->
+    <h1>Events List</h1>
 
-    {% for task in tasks %}
+    {% for event in events %}
+    
     <div>
         <p>
-            {{ task.title }} : <b>{{ task.description }}</b>
-            {% if task.done %}
-                <span>😎</span>
-            {% endif %}
+            {{ event.date }} : <b>{{ event.event_name}}</b>
         </p>
+
+        <!--date, event_name, guest_numbers, room_location, description-->
+
     </div>
     {% endfor %}
 

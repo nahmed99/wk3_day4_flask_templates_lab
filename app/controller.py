@@ -1,10 +1,10 @@
 from flask import render_template
 from app import app
-from app.models.todo_list import tasks
+from app.models.todo_list import events
 
 @app.route('/') # This listens for 'requests' to the home/root
 def index():
-    return render_template('index.html', title="Home", tasks=tasks)
+    return render_template('index.html', title="Home", events=events)
 
 
 @app.route('/info')
