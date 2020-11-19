@@ -7,32 +7,15 @@
     {% for event in events %}
     
     <div>
-        <p>
+        <p id=the-para>
             {{ event.date }} : <b>{{ event.event_name}}, &#8287; {{ event.guest_numbers }}, &#8287; {{event.room_location}}, &#8287; {{event.description}}</b>
-        </p>
-
-        <!--date, event_name, guest_numbers, room_location, description-->
-
-    </div>
-    {% endfor %}
-
-{% endblock %}
-
-
-{% block second_one %}
-
-    <h1>My second todo List - creating a second block!!!</h1>
-    <!-- Jinja 2 to merge Python into this document -->
-    <!-- Note the use of single curly brackets in this case -->
-
-    {% for task in tasks %}
-    <div>
-        <p>
-            {{ task.title }} : <b>{{ task.description }}</b>
-            {% if task.done %}
-                <span>👽</span>
+            {% if event.recurring %}
+                <span>👍</span>
             {% endif %}
         </p>
+
+        <!--date, event_name, guest_numbers, room_location, description, recurring-->
+
     </div>
     {% endfor %}
 
